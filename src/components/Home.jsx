@@ -5,7 +5,6 @@ import Header from './Header';
 const Home = () => {
   return (
     <>
-      <Header />
         <div
           className="relative w-full h-lvh bg-cover flex flex-col gap-5 font-sans gra px-3"
           style={{ backgroundImage: `url(${homeBg})` }}
