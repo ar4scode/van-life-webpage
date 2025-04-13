@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
         <div
-          className="relative w-full h-lvh bg-cover flex flex-col gap-5 font-sans gra px-3"
+          className="relative w-full h-lvh bg-cover flex flex-col gap-5 font-sans px-3"
           style={{ backgroundImage: `url(${homeBg})` }}
         >
           {/* Overlay to darken the background */}
