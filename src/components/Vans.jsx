@@ -32,10 +32,10 @@ const Vans = () => {
             <div key={van.id}>
               <img src={van.imageUrl} className="rounded-md" alt="" />
               <div className="flex justify-between">
-                <h1 className="text-nowrap font-bold pt-2">{van.name}</h1>
-                <div className="flex flex-col relative">
-                  <p>{van.price}</p>
-                  <p className="text-sm text-gray-500 absolute top-4 left-1">/day</p>
+                <h1 className="text-nowrap font-bold pt-2 md:text-xl lg:text-2xl">{van.name}</h1>
+                <div className="flex flex-col relative pt-2">
+                  <p className="font-bold lg:text-xl">${van.price}</p>
+                  <p className="text-sm text-gray-500 absolute top-6 lg:top-7 left-3">/day</p>
                 </div>
               </div>
               <p className={`font-semibold text-white max-w-20 text-center p-1 rounded-md mt-2 ${getTypeClass(van.type)}`}>
