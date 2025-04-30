@@ -1,10 +1,9 @@
 import homeBg from '../assets/home-hero.png';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import Header from './Header';
 
 const Home = () => {
   return (
-    <>
         <div
           className="relative w-full h-lvh bg-cover flex flex-col gap-5 font-sans px-3"
           style={{ backgroundImage: `url(${homeBg})` }}
@@ -26,7 +25,6 @@ const Home = () => {
             Find your van
           </Link>
         </div>
-    </>
   );
 };
 
