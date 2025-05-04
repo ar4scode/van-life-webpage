@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 
 const Vans = () => {
   const [vansData, setVansData] = useState([])
@@ -30,7 +31,7 @@ const Vans = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 gap-10 pt-10 p-5 pb-20 fonts">
         {vansData.map((van) => {
           return (
-            <div key={van.id}>
+            <Link to={`/vans/${van.id}`} key={van.id} className="duration-200 hover:shadow-md p-1">
               <img src={van.imageUrl} className="rounded-md" alt="" />
               <div className="flex flex-col gap-2 md:flex-row md:justify-between">
                 <h1 className="text-nowrap font-bold pt-2 md:text-xl lg:text-2xl">{van.name}</h1>
@@ -43,7 +44,7 @@ const Vans = () => {
                 {van.type}
               </p>
 
-            </div>
+            </Link>
           )
         })}
       </div>
