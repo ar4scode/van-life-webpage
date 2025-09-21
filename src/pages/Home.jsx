@@ -1,6 +1,5 @@
 import homeBg from '../assets/home-hero.png';
 import { Link } from 'react-router-dom';
-import Header from './Header';
 
 const Home = () => {
   return (

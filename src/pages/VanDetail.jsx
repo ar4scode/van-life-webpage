@@ -29,7 +29,7 @@ const VanDetail = () => {
       {van ? (
         <div className="flex flex-col px-4 ">
           <Link to="/vans" className="underline hover:opacity-60 duration-150 text-sm">Back to all vans</Link>
-          <img src={van.imageUrl} className="w-70 mt-5 rounded-md mx-auto" alt="" />
+          <img src={van.imageUrl} className="w-60 mt-5 rounded-md mx-auto" alt="" />
           <p className={` text-white text-sm max-w-20 text-center p-1 rounded-md mt-8 ${getTypeClass(van.type)}`}>
                 {van.type}
           </p>
