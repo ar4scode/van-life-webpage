@@ -2,7 +2,6 @@ import './App.css'
 import { Routes, Route } from "react-router-dom"
 
 import Home from './pages/Home'
-import Footer from './components/Footer'
 import About from './pages/About'
 import Vans from './pages/Vans'
 import VanDetail from './pages/VanDetail'
@@ -31,7 +30,6 @@ function App() {
           </Route>
         </Route>
       </Routes>
-      <Footer />
     </>
   )
 }
