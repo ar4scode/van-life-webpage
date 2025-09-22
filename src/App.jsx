@@ -2,13 +2,15 @@ import './App.css'
 import { Routes, Route } from "react-router-dom"
 
 import Home from './pages/Home'
-import Header from './components/Header'
 import Footer from './components/Footer'
 import About from './pages/About'
 import Vans from './pages/Vans'
 import VanDetail from './pages/VanDetail'
-import Host from './pages/Host'
 import Layout from './components/Layout'
+import Dashboard from './pages/Host/Dashboard'
+import Income from './pages/Host/Income'
+import Reviews from './pages/Host/Reviews'
+import HostLayout from './components/Host/HostLayout'
 
 import "./server"
 
@@ -22,6 +24,11 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/vans' element={<Vans />}/>
           <Route path='/vans/:id' element={<VanDetail />} />
+          <Route element={<HostLayout />}>
+            <Route path='/host' element={<Dashboard />} />
+            <Route path='/host/income' element={<Income />} />
+            <Route path='/host/reviews' element={<Reviews />} />
+          </Route>
         </Route>
       </Routes>
       <Footer />
