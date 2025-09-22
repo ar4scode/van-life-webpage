@@ -18,15 +18,17 @@ function App() {
   return (
     <>
       <Routes>
-        <Route element={<Layout />}>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/vans' element={<Vans />}/>
-          <Route path='/vans/:id' element={<VanDetail />} />
-          <Route element={<HostLayout />}>
-            <Route path='/host' element={<Dashboard />} />
-            <Route path='/host/income' element={<Income />} />
-            <Route path='/host/reviews' element={<Reviews />} />
+        <Route path='/' element={<Layout />}>
+        {/* index means: when the path is exactly /, render <Home /> */}
+          <Route index element={<Home />} />
+          <Route path='about' element={<About />} />
+          <Route path='vans' element={<Vans />}/>
+          <Route path='vans/:id' element={<VanDetail />} />
+          <Route path='host' element={<HostLayout />}>
+          {/* index -> that means show the path where the layout component have */}
+            <Route index  element={<Dashboard />} />
+            <Route path='income' element={<Income />} />
+            <Route path='reviews' element={<Reviews />} />
           </Route>
         </Route>
       </Routes>
